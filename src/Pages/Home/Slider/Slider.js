@@ -6,7 +6,7 @@ import img4 from '../../../images/sliderPic/4.jpg'
 
 const Slider = () => {
     return (
-        <div className="carousel w-full">
+        <div className="carousel w-full rounded-lg h-96">
             <div id="slide1" className="carousel-item relative w-full">
                 <img src={img1} className="w-full" />
                 <div className="absolute flex justify-end transform -translate-y-1/2 left-5 right-5 bottom-0">
