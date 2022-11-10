@@ -3,6 +3,7 @@ import Main from "../layout/Main";
 import Home from "../Pages/Home/Home";
 import Allservices from "../Pages/Home/Services/Allservices";
 import Login from "../Pages/Login/Login";
+import MyReviews from "../Pages/MyReviews/MyReviews";
 import Register from "../Pages/Register/Register";
 import Reviews from "../Pages/Reviews/Reviews";
 import ServiceDetails from "../Pages/ServiceDetails/ServiceDetails";
@@ -27,6 +28,9 @@ export const router = createBrowserRouter([
         },
         {path: '/reviews',
         element: <Reviews></Reviews>
+        },
+        {path: '/myreview',
+        element: <MyReviews></MyReviews>
         }
 
     ]
