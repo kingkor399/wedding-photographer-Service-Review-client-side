@@ -1,13 +1,14 @@
-import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
-import ServicesCard from './ServicesCard';
+import { data } from 'autoprefixer';
+import React, { useEffect } from 'react';
+import { useState } from 'react';
+import AllserviceCard from './AllserviceCard';
 
-const Services = () => {
-    const [services, setServices] = useState([]);
+const Allservices = () => {
+    const [allservices, setAllservices] = useState([]);
     useEffect(() => {
-        fetch('https://service-review-server-chi.vercel.app/services')
+        fetch('https://service-review-server-chi.vercel.app/allservice')
             .then(res => res.json())
-            .then(data => setServices(data))
+            .then(data => setAllservices(data))
     }, [])
     return (
         <div>
@@ -20,15 +21,14 @@ const Services = () => {
             </div>
             <div className='grid gap-36 grid-cols-1 md:grid-cols-2 lg:grid-cols-2 mb-4'>
                 {
-                    services.map(service => <ServicesCard
-                        key={service._id}
-                        service={service}
-                    ></ServicesCard>)
+                    allservices.map(allservice => <AllserviceCard
+                        key={allservice._id}
+                        allservice={allservice}
+                    ></AllserviceCard>)
                 }
             </div>
-            <button className='btn btn-success mb-4 font-bold'><Link to='/allservice'>Show All</Link></button>
         </div>
     );
 };
 
-export default Services;
+export default Allservices;
