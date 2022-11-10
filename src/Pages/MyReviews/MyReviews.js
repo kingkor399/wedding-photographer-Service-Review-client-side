@@ -3,6 +3,7 @@ import { useEffect } from 'react';
 import { useState } from 'react';
 import { useContext } from 'react';
 import { AuthContext } from '../../Context/AuthProvider';
+import MyReviewsCard from './MyReviewsCard';
 
 const MyReviews = () => {
     const {user} = useContext(AuthContext);
@@ -15,7 +16,12 @@ const MyReviews = () => {
     },[user?.email])
     return (
         <div>
-            <h2>myreview {myreviews}</h2>
+            {
+                myreviews.map(myreview => <MyReviewsCard
+                key={myreview._id}
+                myreview={myreview}
+                ></MyReviewsCard>)
+            }
         </div>
     );
 };
