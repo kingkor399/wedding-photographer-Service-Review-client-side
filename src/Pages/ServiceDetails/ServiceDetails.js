@@ -19,7 +19,7 @@ const ServiceDetails = () => {
         const review = {
             service: _id,
             serviceName: title, price,
-            customer: name, email, phone, message
+            customer: name, email, phone, message, img
         }
 
         fetch('https://service-review-server-chi.vercel.app/reviews',{
@@ -50,7 +50,7 @@ const ServiceDetails = () => {
                 </div>
             </div>
             <form onSubmit={handleReview}>
-                <h2 className='text-3xl text-orange-600 font-semibold mb-4'>Services Reviews:</h2>
+                <h2 className='text-3xl text-orange-600 font-semibold mb-4'>Please Services Reviews:</h2>
                 <div className='grid grid-cols-1 lg:grid-cols-2 gap-4 mb-4'>
                     <input name="firstName" type="text" placeholder="First Name" className="input input-ghost w-full input-bordered" required />
                     <input name="lastName" type="text" placeholder="Last Name" className="input input-ghost w-full input-bordered" required />
