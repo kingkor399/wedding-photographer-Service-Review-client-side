@@ -1,7 +1,7 @@
 import React from 'react';
 import man from '../../images/man.jpg'
-const MyReviewsCard = ({ myreview }) => {
-    const { customer, serviceName, email, message} = myreview;
+const MyReviewsCard = ({ myreview, handleDelete }) => {
+    const {_id, customer, serviceName, email, message} = myreview;
     return (
         <div>
             <div className="card w-96 bg-base-100 shadow-xl mb-4">
@@ -18,6 +18,7 @@ const MyReviewsCard = ({ myreview }) => {
                     <p className='font-bold'>Customer: {customer}</p>
                     <p className='font-bold'>Email: {email}</p>
                     <p className='font-bold'>Message: {message}</p>
+                    <button onClick={() => handleDelete(_id)} className="btn btn-warning mx-auto">Delete Review</button>
                 </div>
             </div>
         </div>

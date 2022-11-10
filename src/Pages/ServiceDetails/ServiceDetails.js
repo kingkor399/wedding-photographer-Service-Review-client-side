@@ -1,5 +1,6 @@
 import React from 'react';
 import { useContext } from 'react';
+import toast from 'react-hot-toast';
 import { useLoaderData } from 'react-router-dom';
 import { AuthContext } from '../../Context/AuthProvider';
 import Reviews from '../Reviews/Reviews';
@@ -34,7 +35,7 @@ const ServiceDetails = () => {
         .then(data => {
             console.log(data)
             if(data.acknowledged){
-                alert('reviews successfully');
+                toast('reviews successfully')
                 form.reset();
             }
         })

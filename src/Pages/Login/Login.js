@@ -41,7 +41,7 @@ const Login = () => {
                             <input className="btn btn-success" type='submit' value='login'></input>
                         </div>
                     </form>
-                    <p className='text-center font-bold mb-4'>Dream Photography <Link className='text-orange-600' to='/register'>Sign In</Link></p>
+                    <p className='text-center font-bold mb-4'>New to Dream Photography? <Link className='text-orange-600' to='/register'>Sign In</Link></p>
                 </div>
             </div>
         </div>
