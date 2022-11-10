@@ -1,12 +1,17 @@
 import React from 'react';
 
 const MyReviewsCard = ({ myreview }) => {
-    const { customer, serviceName, email, message } = myreview;
+    const { customer, serviceName, email, message} = myreview;
     return (
         <div>
             <div className="card w-96 bg-base-100 shadow-xl mb-4">
                 <figure className="px-10 pt-10">
-                    <img src="https://placeimg.com/400/225/arch" alt="Shoes" className="rounded-xl" />
+                    {
+                        customer?.img ?
+                        <img src={customer?.img}></img>
+                        :
+                        <h1></h1>
+                    }
                 </figure>
                 <div className="card-body items-center text-center">
                     <p className="card-title">ServiceName: {serviceName}</p>

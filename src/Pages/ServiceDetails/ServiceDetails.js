@@ -10,6 +10,7 @@ const ServiceDetails = () => {
     const {user} = useContext(AuthContext);
     const handleReview = event =>{
         event.preventDefault();
+        const img = user?.photoURL
         const form = event.target;
         const name = `${form.firstName.value} ${form.firstName.value}`;
         const email = user?.email || 'unregistered';
