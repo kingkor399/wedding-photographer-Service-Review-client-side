@@ -1,5 +1,5 @@
 import React from 'react';
-
+import man from '../../images/man.jpg'
 const MyReviewsCard = ({ myreview }) => {
     const { customer, serviceName, email, message} = myreview;
     return (
@@ -10,7 +10,7 @@ const MyReviewsCard = ({ myreview }) => {
                         customer?.img ?
                         <img src={customer?.img}></img>
                         :
-                        <h1></h1>
+                        <img src={man}></img>
                     }
                 </figure>
                 <div className="card-body items-center text-center">
