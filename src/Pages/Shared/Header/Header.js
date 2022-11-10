@@ -12,6 +12,7 @@ const Header = () => {
     }
     const menuItems = <>
         <li className='font-bold'><Link to='/'>Home</Link></li>
+        <li className='font-bold'><Link to='/blog'>Blog</Link></li>
         {user?.email ?
             <>
                 <li className='font-bold'><Link to='/myreview'>My Review</Link></li>

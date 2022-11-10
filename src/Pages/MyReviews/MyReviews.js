@@ -4,12 +4,13 @@ import { useState } from 'react';
 import { useContext } from 'react';
 import toast from 'react-hot-toast';
 import { AuthContext } from '../../Context/AuthProvider';
+import useTitle from '../../useTitle/UseTitle';
 import MyReviewsCard from './MyReviewsCard';
 
 const MyReviews = () => {
     const { user } = useContext(AuthContext);
     const [myreviews, setMyreviews] = useState([])
-
+    useTitle('My Review')
     useEffect(() => {
         fetch(`https://service-review-server-chi.vercel.app/myreview?email=${user?.email}`)
             .then(res => res.json())
